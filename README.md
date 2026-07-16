@@ -16,7 +16,7 @@ Sister extension of [Quick Screenshot → Clipboard](https://chromewebstore.goog
 | Page type | Behavior |
 |---|---|
 | Normal page | Captures the **whole page from the top**, up to **7 viewports**, then restores your scroll position |
-| Infinite-scroll feed (Twitter/X, Reddit, Instagram, LinkedIn, …) | Captures up to **7 viewports starting at your current position** and **leaves you at the last captured position** — run it again to continue further down the feed |
+| Infinite or virtualized page | Captures up to **7 viewports starting at your current position** and **leaves you at the last captured position** — run it again to continue further down the feed |
 
 Infinite scroll is detected two ways: a known-hosts list of major feed sites, plus runtime detection (if the scroll target keeps growing while we scroll, the run switches to endless mode).
 
@@ -73,8 +73,8 @@ No data is collected, stored or transmitted. Everything happens locally. See [PR
 - [ ] Short page (fits one screen) → single capture, copied
 - [ ] Long article (3–6 screens) → full page stitched, no repeated headers, no seams
 - [ ] Very long page (>7 screens) → capped at 7, scroll position restored
-- [ ] Long ChatGPT conversation → internal container detected, distinct segments, cropped to the conversation area
-- [ ] LinkedIn feed, scrolled mid-feed → up to 7 screens from current position, stays at last captured position
+- [ ] Long content inside a nested scroll container → active container detected, distinct segments captured, output cropped to the relevant content area
+- [ ] Infinite or virtualized page, started mid-content → up to 7 viewports captured from the current position, final position preserved
 - [ ] Unknown infinite-scroll site → growth detection kicks in, stays at last captured position
 - [ ] Paste into Slack/Figma/Paint works
 - [ ] Normal pages: scroll position and sticky headers restored after capture
