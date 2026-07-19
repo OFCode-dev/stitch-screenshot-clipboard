@@ -21,74 +21,164 @@
   <meta name="twitter:description" content="Capture long pages, stitch them into one PNG, and copy the result directly to your clipboard.">
   <meta name="twitter:image" content="https://ofcodedev.me/stitch-screenshot-clipboard/store-assets/hero.png">
 
-  <meta http-equiv="refresh" content="0; url=https://chromewebstore.google.com/detail/stitch-screenshot-clipboard/ldhpomojadcpocpghpdpinpmagjknfjh">
-  <script>
-    window.location.replace('https://chromewebstore.google.com/detail/stitch-screenshot-clipboard/ldhpomojadcpocpghpdpinpmagjknfjh');
-  </script>
-
   <style>
     :root {
-      color-scheme: dark;
-      --bg: #111117;
-      --text: #f6f5f8;
-      --muted: #aaa7b2;
-      --accent: #f50087;
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --text: #17151c;
+      --muted: #5f5a67;
+      --border: #e5e1e8;
+      --accent: #c80070;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111117;
+        --text: #f6f5f8;
+        --muted: #b7b1bd;
+        --border: #302b35;
+        --accent: #ff4daa;
+      }
     }
 
     * { box-sizing: border-box; }
 
-    html, body { min-height: 100%; }
-
     body {
       margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 32px;
       background: var(--bg);
       color: var(--text);
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    main {
-      width: min(760px, 100%);
-      text-align: center;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin: 0 auto 28px;
-      border-radius: 14px;
-    }
-
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(30px, 6vw, 50px);
-      line-height: 1.08;
-    }
-
-    p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 17px;
       line-height: 1.65;
     }
 
-    a {
-      color: var(--accent);
-      font-weight: 700;
+    main {
+      width: min(820px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+    }
+
+    h2 {
+      margin: 38px 0 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    p, li, td, th { font-size: 16px; }
+    ul, ol { padding-left: 24px; }
+    .lead { font-size: 18px; color: var(--muted); margin: 0 0 28px; }
+    strong { font-weight: 750; }
+    a { color: var(--accent); }
+
+    .hero {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 8px 0 4px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .cta {
+      display: inline-block;
+      margin: 18px 0 4px;
+      padding: 12px 22px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+    }
+
+    th, td {
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    code {
+      background: color-mix(in srgb, var(--border) 45%, transparent);
+      padding: 1px 6px;
+      border-radius: 6px;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <main>
-    <img src="store-assets/hero.png" alt="Stitch Screenshot → Clipboard">
     <h1>Stitch Screenshot → Clipboard</h1>
-    <p>
-      Redirecting to the Chrome Web Store.
-      <a href="https://chromewebstore.google.com/detail/stitch-screenshot-clipboard/ldhpomojadcpocpghpdpinpmagjknfjh">Continue manually</a>.
-    </p>
+    <p class="lead"><strong>Full-page screenshots, stitched into one PNG, copied straight to your clipboard.</strong> Click the icon and the extension scrolls the page, captures every section, stitches them together, and puts the result on your clipboard — ready to paste anywhere. No editor, no file downloads, no account.</p>
+
+    <img class="hero" src="store-assets/hero.png" alt="Stitch Screenshot → Clipboard — one click captures the whole page as a single PNG">
+
+    <p><a class="cta" href="https://chromewebstore.google.com/detail/stitch-screenshot-clipboard/ldhpomojadcpocpghpdpinpmagjknfjh">Get it on the Chrome Web Store →</a></p>
+
+    <h2>Why this exists</h2>
+    <p>Long pages don't fit on one screen. Capturing them normally means taking several screenshots, or installing a heavyweight capture suite. This extension collapses it to <strong>click → paste</strong>:</p>
+    <ol>
+      <li>Click the extension icon (or use the keyboard shortcut)</li>
+      <li>The page is scrolled, captured section by section, and stitched into a single PNG</li>
+      <li>Paste with <strong>Ctrl+V</strong> / <strong>Cmd+V</strong> into Slack, ChatGPT, Docs, Notion, email, tickets — anywhere that accepts images</li>
+    </ol>
+    <p>Perfect for archiving articles, sharing full conversations, bug reports, and feeding whole pages to AI chats.</p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>🧵 <strong>Full-page capture</strong> — scrolls and stitches the entire page into one seamless image</li>
+      <li>📋 <strong>Straight to clipboard</strong> — never touches your disk; falls back to a download only if clipboard access is blocked</li>
+      <li>⚡ <strong>Lightweight</strong> — Manifest V3, no dependencies, no background snooping</li>
+      <li>🔒 <strong>Private by design</strong> — no accounts, no tracking, no analytics, no data collection; everything runs locally</li>
+      <li>🆓 <strong>Free &amp; open source</strong> — MIT licensed</li>
+    </ul>
+
+    <h2>Permissions (all of them)</h2>
+    <table>
+      <tr><th>Permission</th><th>Why</th></tr>
+      <tr><td><code>activeTab</code></td><td>Capture the tab you're on, only when you invoke the extension</td></tr>
+      <tr><td><code>scripting</code></td><td>Inject the temporary scrolling &amp; stitching script into that tab on demand</td></tr>
+      <tr><td><code>clipboardWrite</code></td><td>Put the finished PNG on your clipboard</td></tr>
+    </table>
+    <p>That's the full list — no host permissions, no background access to your browsing.</p>
+
+    <h2>Install from source (developer mode)</h2>
+    <ol>
+      <li>Clone the <a href="https://github.com/OFCode-dev/stitch-screenshot-clipboard">repository</a></li>
+      <li>Open <code>chrome://extensions</code> and enable <strong>Developer mode</strong></li>
+      <li>Click <strong>Load unpacked</strong> and select the <code>extension</code> folder</li>
+    </ol>
+
+    <h2>FAQ</h2>
+    <p><strong>Why doesn't it work on some pages?</strong><br>
+    Chrome blocks screenshots on internal pages (<code>chrome://</code>, <code>chrome-extension://</code>, the Web Store) for security. Regular <code>https://</code> pages all work.</p>
+    <p><strong>The stitched image has gaps or repeated sections.</strong><br>
+    Pages with sticky headers, infinite scroll, or heavy animations can confuse stitching. Let the page fully load and try again — see the <a href="support/">support page</a> for more tips.</p>
+    <p><strong>Where are my screenshots stored?</strong><br>
+    Nowhere. The PNG goes to your clipboard and exists only there.</p>
+
+    <h2>Support</h2>
+    <ul>
+      <li>🐛 <a href="https://github.com/OFCode-dev/stitch-screenshot-clipboard/issues">Report a bug or request a feature</a></li>
+      <li>📖 <a href="support/">Support &amp; troubleshooting</a></li>
+      <li>📧 <a href="mailto:contact@ofcodedev.me">contact@ofcodedev.me</a></li>
+    </ul>
+
+    <h2>Privacy &amp; license</h2>
+    <p>No data collection — see the <a href="privacy/">Privacy Policy</a>. Code is MIT licensed.</p>
   </main>
 </body>
 </html>
