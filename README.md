@@ -4,6 +4,12 @@ One click: scrolls the page, stitches a full-page screenshot and copies it strai
 
 Sister extension of [Quick Screenshot → Clipboard](https://chromewebstore.google.com/detail/quick-screenshot-%E2%86%92-clipbo/pimodklbppjmjnpmhaipihkfnbnldebh) — same philosophy (one click → clipboard), but for **full-page** captures.
 
+## Install
+
+| Browser | Store |
+|---|---|
+| Chrome | [**Chrome Web Store** →](https://chromewebstore.google.com/detail/stitch-screenshot-%E2%86%92-clipb/ldhpomojadcpocpghpdpinpmagjknfjh) |
+
 ## How it works
 
 1. Click the toolbar icon (or press `Alt+Shift+S`).
